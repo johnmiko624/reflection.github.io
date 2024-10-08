@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Privacy Reflection</title>
+    <!-- Link to PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('pic.jpg'); /* Background design */
+            background-color: #2C3E50; /* Dark background */
+            color: #ECF0F1;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #F39C12;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        }
+        p, textarea {
+            font-weight: bold;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #34495E;
+            color: white;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #2980B9;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #3498DB;
+        }
+        #summary {
+            margin-top: 20px;
+            background-color: #ECF0F1;
+            padding: 10px;
+            border-radius: 4px;
+            color: #2C3E50;
+            font-weight: bold;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Reflection on Data Privacy and Awareness Campaign</h1>
+        <p>
+            Attending the <strong>Data Privacy and Awareness Campaign</strong> was an eye-opening experience for me as a Computer Science student. With the rapid growth of technology, it's easy to overlook how much personal information we share online daily. This campaign helped me understand the depth of the problem and why it’s essential to take data privacy seriously.
+        </p>
+        <p>
+            One of the key lessons I learned from the event was how vulnerable personal data can be, especially when stored in online systems. The campaign organizers demonstrated several real-world examples of data breaches and cyberattacks, emphasizing that even the most secure organizations can be targets.
+        </p>
+        <p>
+            The event also reinforced the need for every individual, including students like me, to be aware of data privacy. The presenters spoke about the laws that protect personal information, such as the <strong>Data Privacy Act</strong>. 
+        </p>
+        <p>
+            What struck me the most during the event was the advice on <strong>practical steps</strong> to improve our personal data security. The speakers provided helpful tips, such as creating strong, unique passwords, regularly updating them, and enabling two-factor authentication.
+        </p>
+        <p>
+            In conclusion, the Data Privacy and Awareness Campaign has given me valuable insights into the importance of data privacy and cybersecurity. It’s not just about protecting ourselves from cyberattacks; it’s about fostering a culture of responsibility and ethical data usage.
+        </p>
+
+        <h2>Write Your Reflection Summary:</h2>
+        <textarea id="reflectionInput" placeholder="Enter your reflection..."></textarea>
+        <button onclick="generateSummary()">Generate Summary</button>
+
+        <div id="summary"></div>
+
+        <!-- PyScript to generate summary -->
+        <py-script>
+            def generate_summary(reflection):
+                if len(reflection) < 100:
+                    return "Your reflection is too short. Please provide more details."
+                else:
+                    return f"Summary: {reflection[:100]}..."
+
+            def generateSummary():
+                reflection = Element("reflectionInput").element.value
+                summary = generate_summary(reflection)
+                Element("summary").element.innerHTML = summary
+        </py-script>
+
+        <h2>Certificate of Attendance</h2>
+        <p>The qr code for the e-certufucate has not yet been given, so this is the first qr code answered at the entrance of the program as a temporary replacement while the one for the e-certificate is not yet available.</p>
+        <!-- Add your certificate image here -->
+        <img src="pic1.jpg" alt="E-Certificate" width="400px">
+
+    </div>
+
+</body>
+</html>
+
